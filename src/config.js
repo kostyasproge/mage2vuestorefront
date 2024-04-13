@@ -37,7 +37,8 @@ module.exports = {
     accessTokenSecret: process.env.MAGENTO_ACCESS_TOKEN_SECRET || '00y9dl4vpxgcef3gn5mntbxtylowjcc9',
     storeId: process.env.MAGENTO_STORE_ID || 1,
     currencyCode: process.env.MAGENTO_CURRENCY_CODE || 'USD',
-    msi: { enabled: process.env.MAGENTO_MSI_ENABLED || false, stockId: process.env.MAGENTO_MSI_STOCK_ID || 1 }
+    msi: { enabled: process.env.MAGENTO_MSI_ENABLED || false, stockId: process.env.MAGENTO_MSI_STOCK_ID || 1 },
+    signatureMethod: process.env.MAGENTO_SIGNATURE_METHOD || 'HMAC-SHA1'
   },
 
   vuestorefront: {

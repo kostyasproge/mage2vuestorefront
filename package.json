@@ -1,9 +1,9 @@
 {
   "name": "mage2vuestorefront",
   "private": true,
-  "version": "1.11.1",
-  "description": "Magento sync for products, categories, users and orders",
-  "author": "Piotr Karwatka",
+  "version": "1.11.2",
+  "description": "Up version base module mage2vuestorefront",
+  "author": "Kostya Sprohe",
   "license": "MIT",
   "main": "src/cli.js",
   "scripts": {

@@ -17,7 +17,7 @@ module.exports.RestClient = function (options) {
             public: options.consumerKey,
             secret: options.consumerSecret
         },
-        signature_method: 'HMAC-SHA1'
+        signature_method: options.signatureMethod || 'HMAC-SHA1'
     });
     var token = {
         public: options.accessToken,
@@ -43,7 +43,7 @@ module.exports.RestClient = function (options) {
                     var errorMessage = 'HTTP ERROR ' + response.code;
                     if(body && body.hasOwnProperty('message') )
                         errorMessage = errorString(body.message, body.hasOwnProperty('parameters') ? body.parameters : {});
-                    
+
                     logger.error('API call failed: ' + errorMessage);
                     reject(errorMessage);
                 }
